@@ -1,4 +1,4 @@
-# Tufts AI Safety Student Association
+### Tufts AI Safety Student Association
 <!-- [About Us](#about) · [Programs](#programs) · [Resources](#resources) · --> 
 [Mailing List](https://elist.tufts.edu/sympa/subscribe/tuftsaisafety) · [Slack](https://join.slack.com/t/tuftsaisafety/shared_invite/zt-35tvchsb4-2zaJINQ4U0Kb_CySfcED~A) · [Contact](mailto:contact@tassa.dev)
 
