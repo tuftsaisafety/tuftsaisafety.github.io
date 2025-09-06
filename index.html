@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tufts AI Safety Student Association</title>
+    <meta name="description"
+        content="Students at Tufts University committed to understanding and reducing the risks of advanced AI systems.">
+
+    <!-- Icons & Manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="theme-color" content="#1A1A1A">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
+    <!-- Open Graph (basic) -->
+    <meta property="og:title" content="Tufts AI Safety Student Association (TASSA)">
+    <meta property="og:description"
+        content="Students at Tufts University committed to understanding and reducing the risks of advanced AI systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tassa.dev/">
+
+    <style>
+        :root {
+            --brand: #3F8BBF;
+            --ink: #1A1A1A;
+            --bg: #ffffff;
+            --muted: #f5f7f9;
+            --border: #e6e9ec;
+            --container-max: 850px;
+            /* Adjust this to control page margins */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--brand);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Nav */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .logo img {
+            display: block;
+            height: 40px;
+            width: auto;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 72px 0 72px;
+            text-align: center;
+            background: transparent;
+            color: inherit;
+        }
+
+        .hero-panel {
+            background: var(--brand);
+            color: #fff;
+            padding: 32px 20px;
+            border-radius: 10px;
+        }
+
+        .delimited {
+            position: relative;
+        }
+
+        .delimited::before,
+        .delimited::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--border);
+            pointer-events: none;
+        }
+
+        .delimited::before {
+            left: 0;
+        }
+
+        .delimited::after {
+            right: 0;
+        }
+
+        /* Full-page rails aligned to container edges */
+        .page-rails {
+            position: relative;
+        }
+
+        .page-rails::before,
+        .page-rails::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--border);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .page-rails::before {
+            left: calc((100vw - var(--container-max)) / 2);
+        }
+
+        .page-rails::after {
+            right: calc((100vw - var(--container-max)) / 2);
+        }
+
+        .hero-title {
+            margin: 0;
+            font-weight: 800;
+            line-height: 1.15;
+            font-size: clamp(20px, 3.5vw, 36px);
+            font-family: "Anta", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        /* Apply Anta to headers and navbar items */
+        h1,
+        h2,
+        h3,
+        .nav-links a {
+            font-family: "Anta", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        .bubble {
+            background: var(--brand);
+            color: #fff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 18px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .lead {
+            margin-top: 16px;
+            font-size: 18px;
+        }
+
+        .about-text {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        /* Sections */
+        section {
+            padding: 32px 0;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 28px;
+        }
+
+        h3 {
+            margin: 16px 0 8px;
+            font-size: 20px;
+        }
+
+        /* Calendar */
+        .calendar-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .calendar-frame {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .calendar-note {
+            font-size: 14px;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        /* Programs */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .program-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            background: #fff;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--muted);
+            border: 1px solid var(--border);
+            color: var(--ink);
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 999px;
+        }
+
+        .muted {
+            color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 24px 0 40px;
+            background: #fff;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer small {
+            color: #666;
+        }
+
+        .footer .brandmark {
+            height: 28px;
+            width: 28px;
+            border-radius: 6px;
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .nav-inner {
+                height: auto;
+                padding: 10px 0;
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .logo img {
+                height: 32px;
+            }
+
+            .bubble {
+                font-size: 16px;
+            }
+
+            .lead {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner container">
+            <a class="logo" href="/">
+                <img src="assets/Banner_Short.png" alt="TASSA logo banner">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="https://elist.tufts.edu/sympa/subscribe/tuftsaisafety" target="_blank"
+                        rel="noopener">Mailing List</a></li>
+                <li><a href="https://join.slack.com/t/tuftsaisafety/shared_invite/zt-35tvchsb4-2zaJINQ4U0Kb_CySfcED~A"
+                        target="_blank" rel="noopener">Slack</a></li>
+                <li><a href="mailto:contact@tassa.dev">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-rails">
+        <!-- Hero / Intro -->
+        <header class="hero">
+            <div class="container">
+                <div class="hero-panel">
+                    <h1 class="hero-title">Students at Tufts University committed to understanding and reducing the
+                        risks of advanced AI systems.</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Us -->
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p class="about-text">
+                    The Tufts AI Safety Student Association (TASSA) is a student-led organization committed to
+                    understanding and reducing the risks of advanced AI systems. We provide students and faculty with
+                    resources, events, and career-building opportunities to advance the technical and policy work needed
+                    for safe and responsible AI.
+                </p>
+            </div>
+        </section>
+
+        <!-- Events / Calendar -->
+        <section id="events">
+            <div class="container">
+                <h2>Events</h2>
+                <div class="calendar-wrap">
+                    <iframe class="calendar-frame"
+                        src="https://luma.com/embed/calendar/cal-iMnMvzn4WFspSbO/events?lt=light" frameborder="0"
+                        loading="lazy" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <p class="calendar-note">Can't see the calendar? Open it directly on Luma: <a
+                        href="https://luma.com/TASSA" target="_blank" rel="noopener">https://luma.com/TASSA</a>.</p>
+            </div>
+        </section>
+
+        <!-- Programs -->
+        <section id="programs">
+            <div class="container">
+                <h2>Programs</h2>
+                <div class="programs-grid">
+                    <article class="program-card">
+                        <h3>Technical Fellowship</h3>
+                        <p><strong>Applications open soon for Fall 2025!</strong></p>
+                        <p>Our technical fellowship is an 8-week, in-person reading group that covers the foundations of
+                            frontier AI technology with topics like model interpretability, goal misgeneralization,
+                            reinforcement learning, oversight, and more.</p>
+                        <p>The program is self-contained with no outside readings required and catered dinner/lunch is
+                            provided. The fellowship is open to undergraduates, graduate students, and postdocs looking
+                            to learn more about technical AI safety. Please direct questions to <a
+                                href="mailto:contact@tassa.dev">contact@tassa.dev</a>.</p>
+                    </article>
+                    <article class="program-card">
+                        <h3>Policy Fellowship</h3>
+                        <p><strong>Applications open soon for Fall 2025!</strong></p>
+                        <p>Our policy fellowship is an 8-week, in-person reading group that discusses governance and
+                            policy solutions for problems posed by transformative AI systems. We will read draft
+                            legislation, dissect governance frameworks, and develop a basic understanding of the social,
+                            political, and technical challenges of AI.</p>
+                        <p>The program is self-contained with no outside readings required and catered dinner/lunch is
+                            provided. The fellowship is open to undergraduates, graduate students, and postdocs looking
+                            to learn more about AI policy. Please direct questions to <a
+                                href="mailto:contact@tassa.dev">contact@tassa.dev</a>.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <ul class="footer-links">
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="https://elist.tufts.edu/sympa/subscribe/tuftsaisafety" target="_blank"
+                            rel="noopener">Mailing List</a></li>
+                    <li><a href="https://join.slack.com/t/tuftsaisafety/shared_invite/zt-35tvchsb4-2zaJINQ4U0Kb_CySfcED~A"
+                            target="_blank" rel="noopener">Slack</a></li>
+                    <li><a href="mailto:contact@tassa.dev">Contact</a></li>
+                </ul>
+                <img class="brandmark" src="assets/android-chrome-192x192.png" alt="TASSA icon">
+            </div>
+            <div style="height: 12px"></div>
+            <small>
+                &copy; 2025 Tufts AI Safety Student Association. All rights reserved.
+                <br>
+                TASSA is an independent student organization. Views expressed do not necessarily reflect the positions
+                of Tufts University. TASSA receives fiscal sponsorship from <a href="https://existence.org"
+                    target="_blank" rel="noopener">the Berkeley Existential Risk Initiative (BERI)</a>.
+            </small>
+        </div>
+    </footer>
+</body>
+
+</html>
