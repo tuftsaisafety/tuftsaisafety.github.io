@@ -2,7 +2,7 @@ title: Tufts AI Safety Student Association
 description: >-
   Students at Tufts University committed to understanding and reducing the risks of advanced AI systems.
 url: https://tassa.dev
-baseurl: ""
+baseurl: /PROJECT
 
 # Theme and brand configuration
 theme_color: "#1A1A1A"
