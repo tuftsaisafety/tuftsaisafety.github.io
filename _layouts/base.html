@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Icons & Manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.apple_touch_icon }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.favicon_32 }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.favicon_16 }}">
+    <link rel="manifest" href="{{ site.manifest_path }}">
+    <meta name="theme-color" content="{{ site.theme_color }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Preconnect for Luma calendar -->
+    <link rel="preconnect" href="https://luma.com">
+    <link rel="dns-prefetch" href="https://luma.com">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    {% include nav.html %}
+    <main class="page-rails">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+    <script src="/assets/js/main.js" defer></script>
+</body>
+
+</html>
