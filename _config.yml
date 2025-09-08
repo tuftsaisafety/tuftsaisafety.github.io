@@ -1,0 +1,51 @@
+title: Tufts AI Safety Student Association
+description: >-
+  Students at Tufts University committed to understanding and reducing the risks of advanced AI systems.
+url: https://tassa.dev
+baseurl: ""
+
+# Theme and brand configuration
+theme_color: "#1A1A1A"
+brand_color: "#3F8BBF"
+container_max: "850px"
+bg_color: "#ffffff"
+muted_color: "#f5f7f9"
+border_color: "#e6e9ec"
+
+# Typography
+font_family: 'Roboto, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"'
+heading_font_family: 'Roboto, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"'
+
+# Images / assets
+banner_image: /assets/Banner_Short.png
+banner_image_long: /assets/Banner_Long.png
+favicon_32: /assets/favicon-32x32.png
+favicon_16: /assets/favicon-16x16.png
+apple_touch_icon: /assets/apple-touch-icon.png
+manifest_path: /assets/site.webmanifest
+
+# Navigation (edit to add/remove links)
+nav_links:
+  - title: Home
+    url: /
+  - title: Get Involved
+    url: /get-involved/
+  - title: Programs
+    url: /programs/
+  - title: Mailing List
+    url: https://elist.tufts.edu/sympa/subscribe/tuftsaisafety
+    external: true
+  - title: Slack
+    url: https://join.slack.com/t/tuftsaisafety/shared_invite/zt-35tvchsb4-2zaJINQ4U0Kb_CySfcED~A
+    external: true
+  - title: Contact
+    url: mailto:contact@tassa.dev
+    external: true
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins: []
+
+# Third-party embeds
+calendar_embed_url: https://luma.com/embed/calendar/cal-iMnMvzn4WFspSbO/events?lt=light
