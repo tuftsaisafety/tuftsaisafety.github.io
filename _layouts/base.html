@@ -8,10 +8,10 @@
     <meta name="description" content="{{ site.description }}">
 
     <!-- Icons & Manifest -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.apple_touch_icon }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.favicon_32 }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.favicon_16 }}">
-    <link rel="manifest" href="{{ site.manifest_path }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.apple_touch_icon | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.favicon_32 | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.favicon_16 | relative_url }}">
+    <link rel="manifest" href="{{ site.manifest_path | relative_url }}">
     <meta name="theme-color" content="{{ site.theme_color }}">
 
     <!-- Fonts -->
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://luma.com">
     <link rel="dns-prefetch" href="https://luma.com">
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         {{ content }}
     </main>
     {% include footer.html %}
-    <script src="/assets/js/main.js" defer></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </body>
 
 </html>
