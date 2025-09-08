@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TASSA</title>
+    <meta name="description" content="Tufts AI Safety Student Association.">
+    <meta name="color-scheme" content="light dark">
+    <style>
+        :root {
+            --brand: #3F8BBF;
+            --ink: #1A1A1A;
+            --bg: #ffffff;
+            --muted: #f5f7f9;
+            --border: #e6e9ec;
+            --container-max: 850px;
+            --font-family: Roboto, system-ui, -apple-system, Segoe UI, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            --heading-font-family: Roboto, system-ui, -apple-system, Segoe UI, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+        body { font-family: var(--font-family); line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        a { color: var(--brand); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 16px; }
+
+        /* Header logo */
+        .header-logo { padding: 24px 0 0; text-align: left; }
+        .header-logo img { display: inline-block; height: 40px; width: auto; }
+
+        /* Content */
+        section { padding: 24px 0; }
+        h1, h2, h3 { font-family: var(--heading-font-family); margin: 0 0 12px; }
+        h2 { font-size: 24px; }
+        h3 { font-size: 20px; }
+        .about-text, .message p { font-size: 18px; }
+
+        /* Footer */
+        .footer { border-top: 1px solid var(--border); padding: 24px 0 40px; background: var(--bg); }
+        .footer-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+        .footer small { color: #666; }
+        .footer .brandmark { height: 28px; width: 28px; border-radius: 6px; display: block; }
+
+        /* Utilities */
+        .muted { color: #666; }
+
+        /* Simple mobile adjustments */
+        @media (max-width: 640px) {
+            .header-logo img { height: 32px; }
+        }
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ink: #f4f4f4;
+                --bg: #0b0b0b;
+                --muted: #0f1113;
+                --border: #222222;
+            }
+            .footer small { color: #9aa0a6; }
+            a { color: #8ec0ea; }
+        }
+    </style>
+    <!-- Edit this variable to update the message content for each send -->
+    <script>
+        const MESSAGE_HTML = `
+            <h2>Newsletter Title</h2>
+            <p class="about-text">
+                Replace this section with the newsletter message content. You can add paragraphs,
+                links, and lists as needed. Keep copy concise and scannable.
+            </p>
+            <ul>
+                <li><a href="https://tassa.dev" target="_blank" rel="noopener">Visit our website</a></li>
+                <li><a href="mailto:contact@tassa.dev">Contact us</a></li>
+            </ul>
+        `;
+    </script>
+    <!-- This template is standalone: no external CSS/JS/fonts are imported. -->
+    <!-- Images are referenced via raw GitHub URLs so they render in email clients. -->
+    <!-- Replace the placeholder content inside .message as needed for each send. -->
+    <!-- To preview locally, just open this file in a browser. -->
+</head>
+<body>
+    <!-- Simple header logo (no nav bar) -->
+    <div class="container header-logo">
+        <a href="https://tassa.dev" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/tuftsaisafety/tuftsaisafety.github.io/main/assets/Banner_Short.png" alt="TASSA logo banner">
+        </a>
+    </div>
+
+    <!-- Message content area (rendered from MESSAGE_HTML above) -->
+    <section class="message">
+        <div class="container">
+            <div id="message-content"></div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer with website and unsubscribe links + small logo -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <small>
+                    <strong>Tufts AI Safety Student Association</strong><br>
+                    <a href="https://tassa.dev" target="_blank" rel="noopener">tassa.dev</a>
+                    &nbsp;&middot;&nbsp;
+                    <a href="https://elist.tufts.edu/sympa/signoff/tuftsaisafety" target="_blank" rel="noopener">Unsubscribe</a>
+                    &nbsp;&middot;&nbsp;
+                    View upcoming events: <a href="https://luma.com/TASSA" target="_blank" rel="noopener">luma.com/TASSA</a>
+                </small>
+                <img class="brandmark" src="https://raw.githubusercontent.com/tuftsaisafety/tuftsaisafety.github.io/main/assets/android-chrome-192x192.png" alt="TASSA icon">
+            </div>
+            <div style="height: 12px"></div>
+            <small class="muted">
+                © <span id="year"></span> Tufts AI Safety Student Association.
+            </small>
+        </div>
+    </footer>
+
+    <script>
+        // Minimal, inline year updater (no external JS)
+        (function(){
+            var el = document.getElementById('year');
+            if (el) { el.textContent = new Date().getFullYear(); }
+        })();
+        // Render the message content
+        (function(){
+            var target = document.getElementById('message-content');
+            if (target && typeof MESSAGE_HTML === 'string') { target.innerHTML = MESSAGE_HTML; }
+        })();
+    </script>
+</body>
+</html>
