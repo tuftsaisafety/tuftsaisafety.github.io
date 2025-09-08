@@ -1,16 +1,4 @@
----
----
-
-:root {
-    --brand: {{ site.brand_color }};
-    --ink: {{ site.theme_color }};
-    --bg: {{ site.bg_color }};
-    --muted: {{ site.muted_color }};
-    --border: {{ site.border_color }};
-    --container-max: {{ site.container_max }};
-    --font-family: {{ site.font_family }};
-    --heading-font-family: {{ site.heading_font_family }};
-}
+/* Theme variables are injected inline via _layouts/base.html */
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
