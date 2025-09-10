@@ -34,6 +34,16 @@ a:hover { text-decoration: underline; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { top: 13px; transform: rotate(-45deg); }
 
+/* Site banner */
+.site-banner { position: sticky; top: 0; z-index: 20; background: var(--banner-bg); color: var(--banner-fg); border-bottom: 1px solid rgba(0,0,0,0.06); }
+.site-banner-inner { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 8px 16px; }
+.site-banner a { color: inherit; text-decoration: underline; font-weight: 700; }
+.site-banner-text { flex: 1; }
+.site-banner-close { background: transparent; color: inherit; border: 0; font-size: 22px; line-height: 1; cursor: pointer; padding: 4px 6px; border-radius: 6px; }
+.site-banner-close:hover { background: rgba(255,255,255,0.12); }
+.site-banner--closing { animation: bannerOut 180ms ease forwards; }
+@keyframes bannerOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-6px); } }
+
 /* Hero */
 .hero { padding: 72px 0 72px; text-align: center; background: transparent; color: inherit; }
 .hero-panel { background: var(--brand); color: #fff; padding: 32px 20px; border-radius: 10px; }

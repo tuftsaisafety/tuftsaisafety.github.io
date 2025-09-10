@@ -24,6 +24,8 @@
         --container-max: {{ site.container_max }};
         --font-family: {{ site.font_family }};
         --heading-font-family: {{ site.heading_font_family }};
+        --banner-bg: {{ site.banner.bg_color | default: site.brand_color }};
+        --banner-fg: {{ site.banner.text_color | default: '#1A1A1A' }};
     }
     </style>
 
@@ -41,6 +43,7 @@
 </head>
 
 <body>
+    {% include banner.html %}
     {% include nav.html %}
     <main class="page-rails">
         {{ content }}
