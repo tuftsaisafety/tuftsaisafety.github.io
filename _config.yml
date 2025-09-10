@@ -49,3 +49,15 @@ plugins: []
 
 # Third-party embeds
 calendar_embed_url: https://luma.com/embed/calendar/cal-iMnMvzn4WFspSbO/events?lt=light
+
+# Optional site-wide banner
+banner:
+  enabled: true
+  id: fall-2025-fellowships
+  start: 2025-09-09 00:00:00 -1200
+  end: 2025-09-19 23:59:59 -1200
+  bg_color: "#a4c9f0"
+  text_color: "#1A1A1A"
+  # Provide either `text` or `html`. `html` lets you include links.
+  html: >-
+    Fellowship applications are open! <a href="https://forms.gle/HWK5iReTmB419WYA8" target="_blank" rel="noopener">Apply here!</a> Applications close Friday, September 19th, EoD AoE
