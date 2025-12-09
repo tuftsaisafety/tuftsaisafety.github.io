@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+
+# Generated files
+*.min.js
+*.min.css
+
+# Package files
+package-lock.json
+yarn.lock
+
+# OS files
+.DS_Store
+Thumbs.db

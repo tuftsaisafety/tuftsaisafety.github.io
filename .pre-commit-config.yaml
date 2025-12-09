@@ -1,0 +1,27 @@
+# Pre-commit hooks configuration
+# Install: pip install pre-commit
+# Setup: pre-commit install
+# Run manually: pre-commit run --all-files
+
+repos:
+    # General file checks
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.5.0
+      hooks:
+          - id: trailing-whitespace
+            args: [--markdown-linebreak-ext=md]
+          - id: end-of-file-fixer
+          - id: check-yaml
+            args: [--unsafe] # Allow custom YAML tags for Jekyll
+          - id: check-json
+          - id: check-merge-conflict
+          - id: mixed-line-ending
+            args: [--fix=lf]
+
+    # Prettier for code formatting
+    - repo: https://github.com/pre-commit/mirrors-prettier
+      rev: v4.0.0-alpha.8
+      hooks:
+          - id: prettier
+            types_or: [html, css, javascript, json, yaml, markdown]
+            exclude: ^(_site/|node_modules/|\.sass-cache/|\.jekyll-cache/)
