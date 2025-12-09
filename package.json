@@ -1,0 +1,17 @@
+{
+    "name": "tuftsaisafety",
+    "version": "1.0.0",
+    "description": "Tufts AI Safety website",
+    "private": true,
+    "scripts": {
+        "format": "prettier --write \"**/*.{html,css,js,json,yml,md}\" --ignore-path .prettierignore",
+        "format:check": "prettier --check \"**/*.{html,css,js,json,yml,md}\" --ignore-path .prettierignore"
+    },
+    "devDependencies": {
+        "prettier": "^3.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
+    }
+}
