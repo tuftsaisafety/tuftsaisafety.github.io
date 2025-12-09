@@ -1,24 +1,27 @@
 <footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <ul class="footer-links">
-                {% for item in site.nav_links %}
-                <li>
-                    <a href="{{ item.url }}" {% if item.external %}target="_blank" rel="noopener" {% endif %}>{{
-                        item.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-            <img class="brandmark" src="/assets/android-chrome-192x192.png" alt="TASSA icon">
-        </div>
-        <div style="height: 12px"></div>
-        <small>
-            &copy; {{ "now" | date: "%Y" }} Tufts AI Safety Student Association.
-            <br>
-            TASSA is an independent student organization at Tufts University. The views expressed within our organization do not represent the views of Tufts University.
-            <br>
-            TASSA receives fiscal sponsorship from <a href="https://existence.org" target="_blank" rel="noopener">the
-                Berkeley Existential Risk Initiative (BERI)</a>.
-        </small>
+  <div class="container">
+    <div class="footer-top">
+      <ul class="footer-links">
+        {% for item in site.nav_links %}
+        <li>
+          <a href="{{ item.url }}" {% if item.external %}target="_blank" rel="noopener" {% endif %}>{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <img class="brandmark" src="/assets/android-chrome-192x192.png" alt="TASSA icon" />
     </div>
+    <div style="height: 12px"></div>
+    <small>
+      &copy; {{ "now" | date: "%Y" }} Tufts AI Safety Student Association.
+      <br />
+      TASSA is an independent student organization at Tufts University. The views expressed within our organization do
+      not represent the views of Tufts University.
+      <br />
+      TASSA receives fiscal sponsorship from
+      <a href="https://kairos-project.org/" target="_blank" rel="noopener">Kairos</a>
+      through
+      <a href="https://existence.org" target="_blank" rel="noopener">BERI</a>
+      .
+    </small>
+  </div>
 </footer>
