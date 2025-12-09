@@ -1,44 +1,43 @@
-{% assign banner = site.banner %}
-{% if banner and banner.enabled %}
-    {% assign now = site.time | date: '%s' %}
-    {% assign start = banner.start | date: '%s' %}
-    {% assign end = banner.end | date: '%s' %}
-    {% if (banner.start == nil or now >= start) and (banner.end == nil or now <= end) %}
-    <div class="site-banner" role="region" aria-label="Site announcement" data-banner-id="{{ banner.id | default: 'default' }}">
-        <div class="container site-banner-inner">
-            <div class="site-banner-text">
-                {% if banner.html %}
-                    {{ banner.html }}
-                {% else %}
-                    {{ banner.text }}
-                {% endif %}
-            </div>
-            <button class="site-banner-close" aria-label="Dismiss announcement" title="Dismiss">×</button>
-        </div>
-    </div>
-    <script>
-    (function(){
-      try {
-        var el = document.querySelector('.site-banner');
-        if (!el) return;
-        var id = el.getAttribute('data-banner-id') || 'default';
-        var storageKey = 'siteBannerDismissed:' + id;
-        if (localStorage.getItem(storageKey) === '1') {
-          el.parentNode && el.parentNode.removeChild(el);
-          return;
-        }
-        var close = el.querySelector('.site-banner-close');
-        if (close) {
-          close.addEventListener('click', function(){
-            try { localStorage.setItem(storageKey, '1'); } catch(e) {}
-            el.classList.add('site-banner--closing');
-            setTimeout(function(){ el.parentNode && el.parentNode.removeChild(el); }, 180);
-          });
-        }
-      } catch (e) { /* no-op */ }
-    })();
-    </script>
-    {% endif %}
-{% endif %}
-
-
+{% assign banner = site.banner %} {% if banner and banner.enabled %} {% assign now = site.time | date: '%s' %} {% assign
+start = banner.start | date: '%s' %} {% assign end = banner.end | date: '%s' %} {% if (banner.start == nil or now >=
+start) and (banner.end == nil or now <= end) %}
+<div
+  class="site-banner"
+  role="region"
+  aria-label="Site announcement"
+  data-banner-id="{{ banner.id | default: 'default' }}"
+>
+  <div class="container site-banner-inner">
+    <div class="site-banner-text">{% if banner.html %} {{ banner.html }} {% else %} {{ banner.text }} {% endif %}</div>
+    <button class="site-banner-close" aria-label="Dismiss announcement" title="Dismiss">×</button>
+  </div>
+</div>
+<script>
+  (function () {
+    try {
+      var el = document.querySelector(".site-banner");
+      if (!el) return;
+      var id = el.getAttribute("data-banner-id") || "default";
+      var storageKey = "siteBannerDismissed:" + id;
+      if (localStorage.getItem(storageKey) === "1") {
+        el.parentNode && el.parentNode.removeChild(el);
+        return;
+      }
+      var close = el.querySelector(".site-banner-close");
+      if (close) {
+        close.addEventListener("click", function () {
+          try {
+            localStorage.setItem(storageKey, "1");
+          } catch (e) {}
+          el.classList.add("site-banner--closing");
+          setTimeout(function () {
+            el.parentNode && el.parentNode.removeChild(el);
+          }, 180);
+        });
+      }
+    } catch (e) {
+      /* no-op */
+    }
+  })();
+</script>
+{% endif %} {% endif %}

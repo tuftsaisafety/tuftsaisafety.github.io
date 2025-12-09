@@ -52,11 +52,12 @@ calendar_embed_url: https://luma.com/embed/calendar/cal-iMnMvzn4WFspSbO/events?l
 
 # Optional site-wide banner
 banner:
-  enabled: false
-  id:
-  start:
-  end:
+  enabled: true
+  id: spring-fellowship-2026
+  start: 2025-12-08
+  end: 2026-01-26
   bg_color: "#a4c9f0"
   text_color: "#1A1A1A"
   # Provide either `text` or `html`. `html` lets you include links.
   html: >-
+    <strong>Spring Fellowship Applications Now Open!</strong> Apply by January 25, 2026. <a href="/programs/" style="text-decoration: underline; font-weight: 500;">Learn more</a> | <a href="https://forms.gle/YKFr1B1i7aMVQcUk9" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: 500;">Apply here</a>
