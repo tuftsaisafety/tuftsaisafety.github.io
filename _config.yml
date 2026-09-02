@@ -47,19 +47,19 @@ calendar_embed_url: https://luma.com/embed/calendar/cal-iMnMvzn4WFspSbO/events?l
 
 # Optional site-wide banner
 banner:
-    enabled: false
-    id: spring-fellowship-2026
-    start: 2025-12-08
-    end: 2026-01-26
+    enabled: true
+    id: fall-fellowship-2026
+    start: 2026-09-01
+    end: 2026-09-20
     bg_color: "#a4c9f0"
     text_color: "#1A1A1A"
     # Provide either `text` or `html`. `html` lets you include links.
     html: >-
-        <strong>Spring Fellowship Applications Now Open!</strong> Apply by January 25, 2026. <a href="/programs/" style="text-decoration: underline; font-weight: 500;">Learn more</a> | <a href="https://forms.gle/YKFr1B1i7aMVQcUk9" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: 500;">Apply here</a>
+        <strong>Fall Fellowship Applications Now Open!</strong> Apply by September 15, 2026. <a href="/programs/" style="text-decoration: underline; font-weight: 500;">Learn more</a> | <a href="https://forms.gle/YKFr1B1i7aMVQcUk9" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: 500;">Apply here</a>
 
 # Home page call-outs (under About Us)
 callouts:
-    - enabled: true
+    - enabled: false
       title: "AI Policy Hackathon"
       text: "Join us for our upcoming AI Policy Hackathon! Compete for prizes and help shape the future of AI governance."
       link_text: "Learn More"
@@ -67,6 +67,6 @@ callouts:
       bg_color: "#f5f7f9" # optional override
     - enabled: true
       title: "Fellowships"
-      text: "We run Technical and Policy Fellowships each semester. Applications for this cycle are closed; we'll run fellowships again in the future."
+      text: "Applications are now open for our Fall Technical and Policy Fellowships! Join an 8-week cohort to explore AI safety."
       link_text: "View Programs"
       url: "/programs/"
