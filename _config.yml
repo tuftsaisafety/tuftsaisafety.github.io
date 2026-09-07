@@ -55,7 +55,7 @@ banner:
     text_color: "#1A1A1A"
     # Provide either `text` or `html`. `html` lets you include links.
     html: >-
-        <strong>Fall Fellowship Applications Now Open!</strong> Apply by September 15, 2026. <a href="/programs/" style="text-decoration: underline; font-weight: 500;">Learn more</a> | <a href="https://forms.gle/YKFr1B1i7aMVQcUk9" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: 500;">Apply here</a>
+        <strong>Fall Fellowship Applications Now Open!</strong> Apply by September 15, 2026. <a href="/programs/" style="text-decoration: underline; font-weight: 500;">Learn more</a> | <a href="https://airtable.com/appJJKiljJGP08yga/pagkeOeQdfLzeKQTJ/form" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: 500;">Apply here</a>
 
 # Home page call-outs (under About Us)
 callouts:
