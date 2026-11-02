@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boston Car Rental Policies - Age 20</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --allow-bg: rgba(34, 197, 94, 0.15);
+      --allow-text: #4ade80;
+      --deny-bg: rgba(239, 68, 68, 0.15);
+      --deny-text: #f87171;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .table-wrapper {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow-x: auto;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.03);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .badge-allow {
+      background-color: var(--allow-bg);
+      color: var(--allow-text);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+
+    .badge-deny {
+      background-color: var(--deny-bg);
+      color: var(--deny-text);
+      border: 1px solid rgba(248, 113, 113, 0.3);
+    }
+
+    .company-name {
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .notes {
+      color: #cbd5e1;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Boston Car Rental Policies (Age 20)</h1>
+      <p class="subtitle">Summary of primary rental company age limits and restrictions for drivers aged 20.</p>
+    </header>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Company</th>
+            <th>Policy & Specifics</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-allow">Allows (Age 20)</span></td>
+            <td class="company-name">Hertz</td>
+            <td class="notes">Minimum age 20 nationwide (economy through full-size). Young driver fee waived or discounted for AAA members.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-allow">Allows (Age 20)</span></td>
+            <td class="company-name">Enterprise</td>
+            <td class="notes">Minimum age 20 across Massachusetts, including Boston Logan (BOS) and neighborhood locations. Daily surcharge applies.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-allow">Allows (Age 20)</span></td>
+            <td class="company-name">National</td>
+            <td class="notes">Minimum age 20 (shares fleet with Enterprise). Specialty and luxury tiers restricted.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-allow">Allows (Age 20)</span></td>
+            <td class="company-name">Alamo</td>
+            <td class="notes">Minimum age 20 (Enterprise Holdings network). Standard young driver surcharge.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-allow">Allows (Age 20)</span></td>
+            <td class="company-name">Dollar</td>
+            <td class="notes">Minimum age 20 nationwide (Hertz subsidiary). Daily young driver fee applies.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-allow">Allows (Age 20)</span></td>
+            <td class="company-name">Thrifty</td>
+            <td class="notes">Minimum age 20 nationwide (Hertz subsidiary). Standard young driver fee.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-allow">Allows (Age 20)</span></td>
+            <td class="company-name">Sixt</td>
+            <td class="notes">Minimum age 20 for select standard categories (compact, sedan). High-end/luxury tiers require age 21 or 25+.</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-deny">Does Not Allow</span></td>
+            <td class="company-name">Avis</td>
+            <td class="notes">Minimum age is 21 nationwide (exceptions only in NY and MI mandated by state law).</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-deny">Does Not Allow</span></td>
+            <td class="company-name">Budget</td>
+            <td class="notes">Minimum age is 21 nationwide (same policy and exceptions as Avis).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>Note: Most companies charge an underage surcharge ($20–$35/day) for drivers under 25 and require a major credit card at pickup.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
